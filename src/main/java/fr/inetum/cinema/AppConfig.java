@@ -1,8 +1,11 @@
 package fr.inetum.cinema;
 
 import fr.inetum.cinema.repositories.FilmRepository;
+import fr.inetum.cinema.repositories.SeanceRepository;
 import fr.inetum.cinema.services.FilmServiceImpl;
+import fr.inetum.cinema.services.SeanceServiceImpl;
 import fr.inetum.cinema.services.interfaces.FilmService;
+import fr.inetum.cinema.services.interfaces.SeanceService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,4 +17,8 @@ public class AppConfig {
         return new FilmServiceImpl(filmRepository);
     }
 
+    @Bean
+    public SeanceService seanceService(SeanceRepository seanceRepository) {
+        return new SeanceServiceImpl(seanceRepository);
+    }
 }
