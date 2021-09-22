@@ -7,6 +7,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +20,7 @@ public class Salle {
     private Integer nbPlaces;
 
     @DBRef
-    @Field("cinema")
-    private Cinema cinema;
+    @Field("seance")
+    private List<Seance> seance;
 
 }

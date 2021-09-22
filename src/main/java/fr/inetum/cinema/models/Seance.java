@@ -23,8 +23,4 @@ public class Seance {
 
     private LocalDateTime date;
 
-    @DBRef
-    @Field("salle")
-    private Salle salle;
-
 }
