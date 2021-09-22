@@ -23,6 +23,6 @@ public class Salle {
 
     @DBRef
     @Field("seance")
-    private List<Seance> seance;
+    private List<Seance> seances;
 
 }
